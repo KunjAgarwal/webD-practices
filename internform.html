@@ -1,77 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Internship Application Form</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 8px;
+            color: #172554;
+            font-size: 36px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        form {
+            width: 100%;
+            max-width: 750px;
+            margin: auto;
+            padding: 35px;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1d4ed8;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px 13px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            background-color: white;
+            transition: 0.2s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="date"]:focus,
+        input[type="password"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            accent-color: #2563eb;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .option label {
+            margin: 0;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px dashed #9ca3af;
+            border-radius: 8px;
+            background: #f9fafb;
+            cursor: pointer;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 11px 25px;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        input[type="submit"] {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            flex: 1;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1d4ed8;
+        }
+
+        input[type="reset"] {
+            background-color: white;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #f3f4f6;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px 12px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            form {
+                padding: 25px 20px;
+            }
+
+            .button-container {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
 </head>
+
 <body>
-    <h1> Internship Application Form</h1>
+
+    <h1>Internship Application Form</h1>
+
     <form action="/register" method="post">
-        <label for="fullname">Full name:</label> 
-        <br>
-        <input type="text" id="fullname",name="fullname" placeholder="enter name"> 
-        <br>
-        <label for="email">University email</label><br>
-        <input type="email" id="email" name="email" placeholder="enter email"> 
-        <br>
-        <label for="phone">Phone number:</label> <br>
-        <input type="tel" id="phone" name="phone" placeholder="enter phone number">
-        <br>
-        <label for="dateOfBirth">Date Of Birth:</label> <br>
-        <input type="date" name="dateOfBirth" id="dateOfBirth">
-        <br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password">
-        <br>
-        <label for="gender" >Gender:</label><br>
-        <input type="radio" value="male" name="gender" id="male">
-        <label for="male">Male</label>
-        <input type="radio" value="female" name="gender" id="female">
-        <label for="female">Female</label>
-        <input type="radio" value="other" name="gender" id="other">
-        <label for="other">Other</label>
-        <br>
-        <label> Select Branch:</label>
-        <br>
-        <select name="branch" id="branch">
-            <option value="cse">CSE</option>
-            <option value="ece">ECE</option>
-            <option value="mech">MECH</option>
-            <option value="civil">CIVIL</option>
-        </select>
-        <br>
-        <label> skills:</label><br>
-        <input type="checkbox" name="skills" value="JavaScript" id="JavaScript">
-        <label for="JavaScript">JavaScript</label>
-        <input type="checkbox" name="skills" value="Java" id="Java">
-        <label for="Java">Java</label> 
-        <input type="checkbox" name="skills" value="HTML" id="HTML">
-        <label for="HTML">HTML</label> 
-        <input type="checkbox" name="skills" value="CSS" id="CSS">
-        <label for="CSS">CSS</label> 
-        <input type="checkbox" name="skills" value="React" id="React">
-        <label for="React">React</label> 
-        <br>
 
-        <label for="Internship Preference" >Internship Preference:</label><br>
-        <input type="radio" value="remote" name="remote" id="remote">
-        <label for="remote">remote</label>
-        <input type="radio" value="on-site" name="remote" id="on-site">
-        <label for="on-site">on-site</label>
-        <br>
-        <label for="resume">Upload Resume:</label><br>
-        <input type="file" id="resume" name="resume">
-        <br>
-        <label for="feedback">Your Feedback:</label><br>
-        <textarea id="feedback" name="feedback" rows="4" cols="50">
-        </textarea>
-        <br>
-        <input type="submit" value="Submit">
+        <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input 
+                type="text" 
+                id="fullname" 
+                name="fullname" 
+                placeholder="Enter your full name"
+                required
+            >
+        </div>
 
-        <input type="Reset" value="Reset">
-        <br>
+        <div class="form-group">
+            <label for="email">University Email</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Enter your university email"
+                required
+            >
+        </div>
 
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                placeholder="Enter your phone number"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="dateOfBirth">Date of Birth</label>
+            <input 
+                type="date" 
+                name="dateOfBirth" 
+                id="dateOfBirth"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+                type="password" 
+                id="password" 
+                name="password"
+                placeholder="Create a password"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+
+            <label>Gender</label>
+
+            <div class="options">
+
+                <div class="option">
+                    <input type="radio" value="male" name="gender" id="male">
+                    <label for="male">Male</label>
+                </div>
+
+                <div class="option">
+                    <input type="radio" value="female" name="gender" id="female">
+                    <label for="female">Female</label>
+                </div>
+
+                <div class="option">
+                    <input type="radio" value="other" name="gender" id="other">
+                    <label for="other">Other</label>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="branch">
+                Select Branch
+            </label>
+
+            <select name="branch" id="branch" required>
+
+                <option value="cse">CSE</option>
+                <option value="ece">ECE</option>
+                <option value="mech">MECH</option>
+                <option value="civil">CIVIL</option>
+
+            </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Skills</label>
+
+            <div class="options">
+
+                <div class="option">
+                    <input 
+                        type="checkbox" 
+                        name="skills" 
+                        value="JavaScript" 
+                        id="JavaScript"
+                    >
+                    <label for="JavaScript">JavaScript</label>
+                </div>
+
+                <div class="option">
+                    <input 
+                        type="checkbox" 
+                        name="skills" 
+                        value="Java" 
+                        id="Java"
+                    >
+                    <label for="Java">Java</label>
+                </div>
+
+                <div class="option">
+                    <input 
+                        type="checkbox" 
+                        name="skills" 
+                        value="HTML" 
+                        id="HTML"
+                    >
+                    <label for="HTML">HTML</label>
+                </div>
+
+                <div class="option">
+                    <input 
+                        type="checkbox" 
+                        name="skills" 
+                        value="CSS" 
+                        id="CSS"
+                    >
+                    <label for="CSS">CSS</label>
+                </div>
+
+                <div class="option">
+                    <input 
+                        type="checkbox" 
+                        name="skills" 
+                        value="React" 
+                        id="React"
+                    >
+                    <label for="React">React</label>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Internship Preference</label>
+
+            <div class="options">
+
+                <div class="option">
+                    <input 
+                        type="radio" 
+                        value="remote" 
+                        name="internshipPreference" 
+                        id="remote"
+                        required
+                    >
+                    <label for="remote">Remote</label>
+                </div>
+
+                <div class="option">
+                    <input 
+                        type="radio" 
+                        value="on-site" 
+                        name="internshipPreference" 
+                        id="on-site"
+                    >
+                    <label for="on-site">On-site</label>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="resume">
+                Upload Resume
+            </label>
+
+            <input 
+                type="file" 
+                id="resume" 
+                name="resume"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="feedback">
+                Your Feedback
+            </label>
+
+            <textarea 
+                id="feedback" 
+                name="feedback"
+                placeholder="Tell us anything you'd like us to know..."
+                required
+            ></textarea>
+        </div>
+        <div class="button-container">
+
+            <input 
+                type="submit" 
+                value="Submit Application"
+            >
+
+            <input 
+                type="reset" 
+                value="Reset"
+            >
+
+        </div>
     </form>
 </body>
 </html>
